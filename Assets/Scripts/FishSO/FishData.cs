@@ -8,7 +8,7 @@ public class FishData : ScriptableObject
     public float maxSize = 100f;
     public float maxPrice = 100f;
     public float movementSpeed = 2f;
-    public Color color = Color.white;
+    public Material material;
 
     public float hungerRate = 1f;
     public float sizeRate = 1f;

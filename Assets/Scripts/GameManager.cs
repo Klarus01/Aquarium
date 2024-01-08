@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    private float money = 100f;
+    private float money = 1000f;
     public float Money { get { return money; } set { value = money; } }
 
     public float FoodCost { get; private set; } = 1f;
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button buyFishButton;
     public Aquarium mainAquarium;
 
+    public FishMutationChance mutationChance;
     private FoodManager foodManager;
     private FishManager fishManager;
 

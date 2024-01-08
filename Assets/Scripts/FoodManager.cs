@@ -11,8 +11,8 @@ public class FoodManager : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            //Food food = Instantiate(foodPrefab, Aquarium.Instance.RandomPointInBounds(), Quaternion.identity);
-            //foodList.Add(food);
+            Food food = Instantiate(foodPrefab, GameManager.Instance.mainAquarium.RandomPointInBounds(), Quaternion.identity);
+            foodList.Add(food);
         }
 
         return foodList;

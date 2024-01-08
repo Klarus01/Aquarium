@@ -124,11 +124,11 @@ public class FishBehaviour : MonoBehaviour
     {
         if (targetPosition.x < transform.position.x)
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90f, transform.eulerAngles.z);
         }
         else
         {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180f, transform.eulerAngles.z);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, 90f, transform.eulerAngles.z);
         }
     }
 

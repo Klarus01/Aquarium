@@ -7,6 +7,8 @@ public class FishStats : MonoBehaviour
     [SerializeField] private FishData fishData;
     [SerializeField] private FishBehaviour fishBehaviour;
     [SerializeField] private RawImage hungerIcon;
+    [SerializeField] private GameObject mutationObject;
+    private Renderer renderer;
 
     [Header("---Parents---")]
     public bool isFishBorn = false;
@@ -31,7 +33,7 @@ public class FishStats : MonoBehaviour
     public float Price => Mathf.Round(maxPrice * Scale);
 
     [Header("---Rest---")]
-    public Color color;
+    public Material material;
     public float movementSpeed;
     public bool isBreeding = false;
 
@@ -60,6 +62,8 @@ public class FishStats : MonoBehaviour
 
     private void Initialization()
     {
+        renderer = GetComponent<Renderer>();
+
         maxHunger = fishData.maxHunger;
         hungerRate = fishData.hungerRate;
 
@@ -69,19 +73,19 @@ public class FishStats : MonoBehaviour
         maxPrice = fishData.maxPrice;
 
         movementSpeed = fishData.movementSpeed;
-        color = fishData.color;
 
-        /*
-        Mutation Part -- TODO
+        material = fishData.material;
+
         if (isFishBorn)
         {
-            mutationChance.CheckMutationOnBreed(ref maxHunger, ref maxSize, ref maxPrice, ref movementSpeed, ref color, momFish, dadFish);
+            GameManager.Instance.mutationChance.CheckMutationOnBreed(ref maxHunger, ref maxSize, ref maxPrice, ref movementSpeed, ref material, momFish, dadFish);
         }
-        else mutationChance.CheckMutationOnBought(ref maxHunger, ref maxSize, ref maxPrice, ref movementSpeed, ref color);
-        */
+        else GameManager.Instance.mutationChance.CheckMutationOnBought(ref maxHunger, ref maxSize, ref maxPrice, ref movementSpeed, ref material);
 
         hunger = Hunger;
         size = Size;
+
+        renderer.material = material;
     }
 
     private void TryEatFood(Food food)

@@ -161,6 +161,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299c83185bd16704a92c7b7f24aeb396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 2b4747c799884104182fef7aa9b4c891, type: 2}
+  - {fileID: 2100000, guid: 1cdb224d5071d2144b713bb0c16146f6, type: 2}
+  - {fileID: 2100000, guid: b79570dfb2b420c4b8dc7aa7d897c01c, type: 2}
+  - {fileID: 2100000, guid: b919d9f1fe178f5459d5af0f1f401a1b, type: 2}
+  - {fileID: 2100000, guid: f9e6d478a5b8ec747b00b3a742612afa, type: 2}
 --- !u!4 &147435603
 Transform:
   m_ObjectHideFlags: 0
@@ -2913,6 +2919,7 @@ MonoBehaviour:
   buyFoodButton: {fileID: 1192871836}
   buyFishButton: {fileID: 1194307709}
   mainAquarium: {fileID: 251878436}
+  mutationChance: {fileID: 147435602}
   foodList: []
 --- !u!4 &1923286425
 Transform:
@@ -3470,22 +3477,22 @@ PrefabInstance:
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
@@ -3495,13 +3502,23 @@ PrefabInstance:
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5934898438145265929, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6264882165212882973, guid: 4b3c08afd495d0641b8abd64e176d4dd,
+        type: 3}
+      propertyPath: mutationChance
+      value: 
+      objectReference: {fileID: 147435602}
+    - target: {fileID: 6264882165212882973, guid: 4b3c08afd495d0641b8abd64e176d4dd,
+        type: 3}
+      propertyPath: mutationObject
+      value: 
+      objectReference: {fileID: 147435601}
     - target: {fileID: 6292420538300998424, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
       propertyPath: aquarium

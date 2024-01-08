@@ -17,6 +17,6 @@ MonoBehaviour:
   maxSize: 100
   maxPrice: 100
   movementSpeed: 2
-  color: {r: 1, g: 1, b: 1, a: 1}
+  material: {fileID: 2100000, guid: d3c7129b58a1328479338fc44aa5c712, type: 2}
   hungerRate: 1
   sizeRate: 1
