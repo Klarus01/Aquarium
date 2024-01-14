@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     private float money = 1000f;
-    public float Money { get { return money; } set { value = money; } }
+    public float Money { get { return money; } set { UpdateMoneyText(); } }
 
     public float FoodCost { get; private set; } = 1f;
     public float FishCost { get; private set; } = 50f;

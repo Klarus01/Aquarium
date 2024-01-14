@@ -8,7 +8,7 @@ public class FishStats : MonoBehaviour
     [SerializeField] private FishBehaviour fishBehaviour;
     [SerializeField] private RawImage hungerIcon;
     [SerializeField] private GameObject mutationObject;
-    private Renderer renderer;
+    private new Renderer renderer;
 
     [Header("---Parents---")]
     public bool isFishBorn = false;

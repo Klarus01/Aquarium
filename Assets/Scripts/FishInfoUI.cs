@@ -66,7 +66,6 @@ public class FishInfoUI : MonoBehaviour
 
     private void SellButton()
     {
-        Debug.Log("Fish Sold!");
         GameManager.Instance.Money += fish.Price;
         panel.SetActive(false);
         Destroy(fish.gameObject);

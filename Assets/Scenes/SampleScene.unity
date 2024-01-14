@@ -3511,11 +3511,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6264882165212882973, guid: 4b3c08afd495d0641b8abd64e176d4dd,
         type: 3}
-      propertyPath: mutationChance
-      value: 
-      objectReference: {fileID: 147435602}
-    - target: {fileID: 6264882165212882973, guid: 4b3c08afd495d0641b8abd64e176d4dd,
-        type: 3}
       propertyPath: mutationObject
       value: 
       objectReference: {fileID: 147435601}

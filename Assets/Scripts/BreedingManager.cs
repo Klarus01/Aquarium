@@ -43,10 +43,15 @@ public class BreedingManager : MonoBehaviour
         fish.momFish = momFish;
         fish.dadFish = dadFish;
 
-        momFish.GetComponent<FishBehaviour>().aquarium = mainAquarium;
-        momFish.isBreeding = false;
-        dadFish.GetComponent<FishBehaviour>().aquarium = mainAquarium;
-        dadFish.isBreeding = false;
+        MoveParentsFishToMainAquarium(momFish);
+        MoveParentsFishToMainAquarium(dadFish);
+    }
+
+    private void MoveParentsFishToMainAquarium(FishStats fish)
+    {
+        fish.GetComponent<FishBehaviour>().AquariumChanged(mainAquarium);
+        fish.transform.position = mainAquarium.transform.position;
+        fish.isBreeding = false;
     }
 
     private IEnumerator IncreaseBreedingPercentOverTime(Breeding breeding)
